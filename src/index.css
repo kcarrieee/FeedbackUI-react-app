@@ -8,8 +8,8 @@
 
 body {
   font-family: 'Poppins', sans-serif;
-  background-color: #242424;
-  color: #fff;
+  background-color: #fafafa;
+  color: rgb(14, 14, 14);
   line-height: 1.6;
 }
 .spinner{
@@ -43,11 +43,24 @@ header {
 
 .card {
   background-color: rgb(243, 243, 243);
-  color: #333;
+  color: rgb(193, 193, 193);
   border-radius: 15px;
+  border: 1px solid black;
   padding: 40px 50px;
   margin: 20px 0;
   position: relative;
+}
+
+.card::after{
+  content: '';
+  position: absolute;
+  z-index: -10;
+  top: 5px;
+  left: 5px;
+  height: 100%;
+  width: 100%;
+  background-color: #000;
+  border-radius: 15px;
 }
 
 
@@ -68,10 +81,11 @@ header {
 .rating li,
 .num-display {
   position: relative;
-  background: #4127d6;
-  color: #fff;
+  background: #ffffff;
+  color: rgb(0, 0, 0);
   width: 50px;
   height: 50px;
+  border: 1px solid black;
   padding: 10px;
   text-align: center;
   border-radius: 50%;
@@ -93,7 +107,7 @@ header {
 
 .rating li:hover,
 .num-display {
-  background: #9e6aff;
+  background: #e1344b;
   color: #fff;
 }
 
@@ -102,14 +116,14 @@ header {
 }
 
 [type='radio']:checked ~ label {
-  background: #9e6aff;
+  background: #e1344b;
   color: #fff;
 }
 
 .input-group {
   display: flex;
   flex-direction: row;
-  border: 1px solid rgb(129, 129, 129);
+  border: 1px solid black;
   padding: 8px 10px;
   border-radius: 8px;
 }
@@ -126,7 +140,7 @@ input:focus {
 }
 
 .feedback-stats {
-  color: #fff;
+  color: rgb(0, 0, 0);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -152,22 +166,70 @@ input:focus {
   right: 40px;
 }
 
+
+
+
+
+
+
 .btn {
+  appearance: button;
+  background-color: #000;
+  background-image: none;
+  border: 1px solid #000;
+  border-radius: 4px;
+  box-shadow: #fff 4px 4px 0 0,#000 4px 4px 0 1px;
+  box-sizing: border-box;
   color: #fff;
-  border: 0;
-  border-radius: 8px;
-  color: #fff;
-  width: 100px;
-  height: 40px;
   cursor: pointer;
+  display: inline-block;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  margin: 0 5px 10px 0;
+  overflow: visible;
+  padding: 12px 40px;
+  text-align: center;
+  text-transform: none;
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
 }
 
+.btn:focus {
+  text-decoration: none;
+}
+
+.btn:hover {
+  text-decoration: none;
+}
+
+.btn:active {
+  box-shadow: rgba(0, 0, 0, .125) 0 3px 5px inset;
+  outline: 0;
+}
+
+.btn:not([disabled]):active {
+  box-shadow: #fff 2px 2px 0 0, #000 2px 2px 0 1px;
+  transform: Translate(2px, 2px);
+}
+
+@media (min-width: 768px) {
+  .button-50 {
+    padding: 12px 50px;
+  }
+}
+
+
 .btn-primary {
-  background-color: #4127d6;
+  background-color: #ea0c52;
 }
 
 .btn-secondary {
-  background: #9e6aff;
+  background: #ec1e52;
 }
 
 .btn:hover {
@@ -189,26 +251,24 @@ input:focus {
 .message {
   padding-top: 10px;
   text-align: center;
-  color: rgb(175, 132, 218);
+  color: rgb(155, 155, 155);
 }
 
-/* FIX: Remove position: absolute to keep about icon at the bottom of the
- * document */
+
 .about-link {
   display: flex;
   justify-content: flex-end;
   margin: 20px;
 }
 
-/* FIX: Remove position: absolute to keep about icon at the bottom of the
- * document */
+
 .about-link a {
-  color: #fff;
+  color: rgb(0, 0, 0);
   cursor: pointer;
 }
 
 .about-link a:hover {
-  color: #9e6aff;
+  color: #333333;
 }
 
 .about h1 {

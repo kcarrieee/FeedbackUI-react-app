@@ -6,11 +6,11 @@ const About = () => {
   return (
     <div className="container">
     <Card>
-      
       <h1>About this project</h1>
-      <p>This is feedback user interface with react </p>
-      <p><Link to='/'>Go back home</Link></p>
-    
+      <p style={{marginBottom: '2rem'}}>This is feedback user interface with React js, using
+       Neubrutalism, or Neobrutalism as some people call it, is a mix of regular brutalism in web design and more modern typography, 
+       illustration and animation standards.  </p>
+      <button className='btn btn-primary'><Link to='/' style={{textDecoration: 'none', color: 'white'}}>Go back home</Link></button>
     </Card>
     </div>
   )
